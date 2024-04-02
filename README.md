@@ -20,9 +20,17 @@ pip install pywin32
 ## Uso
 1) Clona o descarga este repositorio en tu sistema.
 2) Asegúrate de tener Python 3.x y la biblioteca win32print instalados.
-3) Ejecuta el script server.py para iniciar el servidor.
-4) Envía archivos al servidor utilizando una conexión TCP/IP.
-5) El servidor imprimirá automáticamente los archivos recibidos en la impresora predeterminada.
+3) Coloca tu direccion IPv4 y un puerto disponible en
+```sh
+server_socket.bind(('Tu direccion IPv4', 12345))  # Enlazamos el socket al puerto 12345 (Cualquiera disponible)
+```
+4) Coloca la url donde guardaste el archivo printer.py (y donde se guardaran los archivos recibidos)
+```sh
+file_dir = "Ruta donde guardaste el archivo.py" + file_name
+```
+5) Ejecuta el script server.py para iniciar el servidor.
+6) Envía archivos al servidor utilizando una conexión TCP/IP.
+7) El servidor imprimirá automáticamente los archivos recibidos en la impresora predeterminada.
 
 ## Opcional: Convertir el script .py a .exe
 
